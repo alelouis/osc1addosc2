@@ -1,8 +1,8 @@
 import numpy as np
 
 f = 440
-ratio = 7/8
+ratio = 1/1
 tp = 2*np.pi
 
-x = lambda t: np.sin(tp*f*t + np.sin(tp*t*440))
-y = lambda t: np.sin(tp*f*ratio*t + x(t)*np.sin(tp*t*230*t) + 40*np.sin(tp*t/2))
+x = lambda t: np.sin(tp*f*t + tp * (1+np.sin(tp*t/4))/2 - np.pi/2)
+y = lambda t: np.sin(tp*f*ratio*t)

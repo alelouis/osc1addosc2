@@ -1,7 +1,7 @@
 import numpy as np
 
 f = 440
-ratio = 2/1
+ratio = 5/6
 tp = 2*np.pi
 
 x = lambda t: np.sin(tp*f*t + tp * (1+np.sin(tp*t/4))/2 - np.pi/2)
